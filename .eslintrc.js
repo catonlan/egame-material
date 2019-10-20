@@ -140,7 +140,7 @@ module.exports = {
     'no-useless-escape': 1, //禁用不必要的转义,配置文件中的 "extends": "eslint:recommended" 属性启用了此规则,在这里放开
     'no-unreachable': 1, //不能有无法执行的代码
     'no-unused-expressions': 2, //不允许无用的表达式
-    'no-unused-vars': [2, { vars: 'all', args: 'after-used' }], //不能有声明后未被使用的变量或参数
+    'no-unused-vars': [1, { vars: 'all', args: 'after-used' }], //不能有声明后未被使用的变量或参数
     'no-use-before-define': 1, //未定义前不能使用
     'no-use-before-define': [2, 'nofunc'], //不允许在未定义之前就使用变量"indent": 2, //强制一致的缩进风格
     'no-var': 2, //使用let和const代替var
