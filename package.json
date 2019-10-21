@@ -57,7 +57,9 @@
     "test": "node scripts/test.js",
     "build:dev": "dotenv -e .env.development node scripts/build.js",
     "build:test": "dotenv -e .env.test node scripts/build.js",
-    "build:prod": "dotenv -e .env.production node scripts/build.js"
+    "build:prod": "dotenv -e .env.production node scripts/build.js",
+    "analyze-src": "source-map-explorer build/static/js/main.*",
+    "analyze-all": "source-map-explorer build/static/js/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"
