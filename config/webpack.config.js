@@ -123,6 +123,14 @@ module.exports = function (webpackEnv) {
     ].filter(Boolean);
 
     if (preProcessor) {
+      const newOptions = {
+        sourceMap: true,
+      };
+
+      if (preProcessor === 'less-loader') {
+        newOptions.javascriptEnabled = true; // 开启JS编译
+      }
+
       loaders.push(
         {
           loader: require.resolve('resolve-url-loader'),
@@ -133,7 +141,7 @@ module.exports = function (webpackEnv) {
         {
           loader: require.resolve(preProcessor),
           options: {
-            sourceMap: true,
+            newOptions,
           },
         }
       );
