@@ -1,5 +1,4 @@
 // 全局函数
-import MD5 from 'md5.js';
 
 
 /**
@@ -176,6 +175,17 @@ function sleep(ms) {
 }
 
 
+/**
+ * 打印调试日志
+ */
+function debuglog() {
+  // 只有非生产环境才打印
+  if (process.env.NODE_ENV === 'development' && process.env.REACT_APP_RUN_ENV !== 'prod') {
+    console.log('debug: ', ...arguments);
+  }
+}
+
+
 export default {
   isString,
   isArray,
@@ -194,4 +204,5 @@ export default {
   isEmpty,
   getMillisecond,
   sleep,
+  debuglog,
 };
