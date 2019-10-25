@@ -1,29 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {connect, } from 'react-redux';
+import myFun from './assets/js/myFun';
+import './styles/App.less';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img alt="logo"
-          className="App-logo"
-          src={logo}
-        />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+
+  render() {
+    return (
+      <div id="App">
+        hello, react!
+      </div>
+    );
+  }
 }
 
-export default App;
+
+// 将state 映射到props
+const mapStateToProps = (state) => {
+  myFun.debuglog(state);
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+  myFun.debuglog(dispatch);
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
