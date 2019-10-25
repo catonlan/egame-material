@@ -9,6 +9,14 @@ class App extends React.Component {
   }
 
 
+  componentDidMount() {
+    setTimeout(function () {
+      const {IniToken, IniTokenTtl, IniNotic, } = window;
+
+      myFun.debuglog('IniToken', IniToken, IniTokenTtl, IniNotic);
+    });
+  }
+
   render() {
     return (
       <div id="App">
