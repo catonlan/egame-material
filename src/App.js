@@ -11,9 +11,9 @@ class App extends React.Component {
 
   componentDidMount() {
     setTimeout(function () {
-      const {IniToken, IniTokenTtl, IniNotic, } = window;
+      const {IniToken, IniTokenTtl, IniNotice, } = window;
 
-      myFun.debuglog('IniToken', IniToken, IniTokenTtl, IniNotic);
+      myFun.debuglog('IniToken', IniToken, IniTokenTtl, IniNotice);
     });
   }
 

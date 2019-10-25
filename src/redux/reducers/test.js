@@ -12,7 +12,7 @@ const initState = {
 
 // reducer是一个计划函数，接收旧的 state 和 action，生成新的 state
 export default function reducer(state = initState, action) {
-  myFun.debuglog('test reducer:', action);
+  // myFun.debuglog('test reducer:', action);
   const step = myFun.isInteger(action.data) ? action.data : 1;
 
   switch (action.type) {
