@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+.html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  /* 解决图片和块级元素之间的间隙问题 */
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+
+input {
+      border: none;
+      -moz-appearance:none;
+      -webkit-appearance : none;
+      /*解决ios上按钮的圆角问题*/
+      border-radius: 0;
+      /*解决ios上输入框圆角问题*/
+      outline:medium;
+      /*去掉鼠标点击的默认黄色边框*/
+      background-color: transparent;
+}
+
+/* 清除浮动的类名 给父容器加了在父容器里面多出一个伪元素 这个伪元素设置清除浮动 会让父元素有高度 */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  *zoom: 1;
+}
+
+//foot 底部栏
+
+.MuiBottomNavigation-root{
+  height:3.5rem !important;
+  width: 100% !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: beige !important;
+  z-index: 666;
+}
+
+.MuiBottomNavigationAction-root {
+  min-width: 0 !important;
+  max-width: none !important;
+  padding: .3rem .6rem .4rem !important;
+}

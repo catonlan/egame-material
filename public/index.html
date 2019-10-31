@@ -2,29 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="攀达电竞,电竞赛事,电竞资讯" />
-    <title>攀达电竞 - 实时的电竞赛事日程和最新的比赛结果</title>
-    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
-    <script src="%REACT_APP_API_URL%/comm/getjs/initoken"></script>
+
+    <title>攀达电竞</title>
+    <!-- Fonts to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
     <script>
-      if ('addEventListener' in document) {
-        document.addEventListener('DOMContentLoaded', function() {
-          FastClick.attach(document.body);
-        }, false);
-      }
-      if(!window.Promise) {
-        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
-      }
+    
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+
+                if (clientWidth >= 640) {
+                  docEl.style.fontSize= 40 + 'px';
+                } else {
+                docEl.style.fontSize = 40 * (clientWidth / 750) + 'px';
+                }             
+            };
+ 
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+    
     </script>
   </head>
   <body>
-    <noscript>你需要开启JavaScript</noscript>
-    <span style="display: none;">%REACT_APP_TEST_API_URL%</span>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
   </body>

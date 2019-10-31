@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect, } from 'react-redux';
 import myFun from './assets/js/myFun';
+import Footer from './components/Footer';
 import './styles/App.less';
 
 class App extends React.Component {
@@ -20,6 +21,8 @@ class App extends React.Component {
   render() {
     return (
       <div id="App">
+
+        <Footer></Footer>
         hello, react!
       </div>
     );
