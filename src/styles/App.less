@@ -55,3 +55,39 @@ input {
   max-width: none !important;
   padding: .3rem .6rem .4rem !important;
 }
+
+
+// 头部栏
+.am-navbar {
+  display: flex;
+  padding: .3rem;
+  justify-content: space-between;
+  background: beige;
+
+  & .am-navbar-left {
+    padding-top: .6rem;
+    
+    & img {
+      display: block;
+      width: 7rem;
+    }
+  }
+
+  & .am-navbar-right {
+    text-align: center;
+
+   & .avatar-bar {
+     font-size: .7rem;
+
+      & img {
+        display: block;
+        width: 2rem;
+      }
+
+      & span {
+        display: inline-block;
+        padding-top: .2rem;
+      }
+    }
+  }
+}
