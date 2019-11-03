@@ -8,13 +8,11 @@ class Guess extends React.Component {
 
   render() {
     return (
-      <div className="notFound"
-        style={{width: '100%', height: '100', backgroundColor: '#f6f6f6', }}
-      >
-        <img alt=""
+      <div className="notFound">
+        {/* <img alt=""
           src={NotFound}
           style={{display: 'block', width: '100%', }}
-        />
+        /> */}
       </div>
     );
   }
