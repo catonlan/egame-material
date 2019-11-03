@@ -8,6 +8,7 @@ import Home from './page/Home';
 import Games from './page/Games';
 import Guess from './page/Guess';
 import Information from './page/Information';
+import NotFound from './page/NotFound';
 import './styles/App.less';
 
 class App extends React.Component {
@@ -50,9 +51,9 @@ class App extends React.Component {
             exact
             path="/information"
           />
+          <Route component={NotFound}/>
         </Switch>
         <Footer></Footer>
-        hello, react!
       </div>
     );
   }
